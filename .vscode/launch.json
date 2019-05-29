@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DemoLab2Application",
+            "request": "launch",
+            "mainClass": "com.rest.demoLab2.DemoLab2Application",
+            "projectName": "demoLab2"
+        }
+    ]
+}

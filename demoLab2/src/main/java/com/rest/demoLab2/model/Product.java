@@ -1,10 +1,11 @@
+package com.rest.demoLab2.model;
+
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import org.hibernate.annotations.Entity;
-import org.springframework.data.annotation.Id;
 
-@Data
 @Entity
 public class Product {
 
@@ -24,5 +25,33 @@ public class Product {
        this.name = name;
        this.description = description;
        this.price = price;
+   }
+
+   /**
+    * @return the name
+    */
+   public String getName() {
+       return name;
+   }
+   
+   /**
+    * @return the id
+    */
+   public long getId() {
+       return id;
+   }
+
+   /**
+    * @return the price
+    */
+   public float getPrice() {
+       return price;
+   }
+
+   /**
+    * @return the description
+    */
+   public String getDescription() {
+       return description;
    }
 }
