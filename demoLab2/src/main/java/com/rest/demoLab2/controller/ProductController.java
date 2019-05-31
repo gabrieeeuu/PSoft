@@ -1,5 +1,7 @@
 package com.rest.demoLab2.controller;
 
+import java.util.List;
+
 import com.exception.product.ProductNotFoundException;
 import com.rest.demoLab2.model.Product;
 import com.rest.demoLab2.service.ProductService;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -70,4 +73,16 @@ public class ProductController {
            throw  new InternalError("Something went wrong");
        }
    }
+
+   @GetMapping(value = "/tudo")
+   public ResponseEntity<List<Product>> pegaTudo(){
+       try {
+
+            return new ResponseEntity<>(productService.findAll(), HttpStatus.OK);
+            // return ResponseEntity.status(HttpStatus.OK).body(productService.findAll());
+       } catch (Exception e){
+            throw new ProductNotFoundException("Cagou irmao");
+       }
+   }
+   
 }

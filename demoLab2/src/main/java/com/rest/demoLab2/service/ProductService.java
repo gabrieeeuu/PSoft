@@ -1,5 +1,7 @@
 package com.rest.demoLab2.service;
 
+import java.util.List;
+
 import com.exception.product.ProductNotFoundException;
 import com.rest.demoLab2.dao.ProductDAO;
 import com.rest.demoLab2.model.Product;
@@ -38,4 +40,9 @@ public class ProductService {
    public Product findById(long id) {
        return productDAO.findById(id);
    }
+
+   public List<Product> findAll(){
+       return productDAO.findAll();
+   }
+
 }
