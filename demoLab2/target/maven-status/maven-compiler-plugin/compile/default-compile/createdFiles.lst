@@ -1,6 +1,6 @@
 com/rest/demoLab2/dao/ProductDAO.class
-com/exception/product/CustomRestError.class
 com/exception/product/RestExceptionHandler.class
+com/exception/product/CustomRestError.class
 com/rest/demoLab2/controller/ProductController.class
 com/rest/demoLab2/DemoLab2Application.class
 com/rest/demoLab2/service/ProductService.class

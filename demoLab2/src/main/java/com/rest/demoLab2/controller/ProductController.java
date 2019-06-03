@@ -1,5 +1,6 @@
 package com.rest.demoLab2.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.exception.product.ProductNotFoundException;
@@ -83,6 +84,20 @@ public class ProductController {
        } catch (Exception e){
             throw new ProductNotFoundException("Cagou irmao");
        }
+   }
+
+   @GetMapping(value = "search/{nome}")
+   @ResponseBody
+   public ResponseEntity<List<Product>> searchByName(@PathVariable String name){
+       List<Product> produtos = productService.findAll();
+
+       for (int i = produtos.size(); i >= 0; i--){
+        if (name != produtos.get(i).getName()){
+            produtos.remove(i);
+        }
+       }
+       
+       return new ResponseEntity<List<Product>>(produtos, HttpStatus.OK);
    }
    
 }
