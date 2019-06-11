@@ -1,9 +1,10 @@
-package com.example.demoLab3.service;
+package com.rest.demoLab2.service;
 
 import java.util.List;
 
 import com.exception.product.ProductNotFoundException;
-import com.example.demoLab3.*;
+import com.rest.demoLab2.dao.ProductDAO;
+import com.rest.demoLab2.model.Product;
 
 import org.springframework.stereotype.Service;
 

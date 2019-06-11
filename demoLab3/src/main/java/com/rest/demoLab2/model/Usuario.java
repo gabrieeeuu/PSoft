@@ -1,22 +1,23 @@
-package main.java.com.example.demoLab3.model;
+package main.java.com.rest.demoLab2.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
-   
+public class Usuario {
+
     @ID
     private String login;
-
     private String password;
     private String name;
 
-    public User () {
-        //Nao faz nada
+    public Usuario (){
+
     }
 
-    public User (String login, String password, String name){
+    public Usuario (String login, String password, String name){
         this.login = login;
         this.password = password;
         this.name = name;
@@ -28,17 +29,20 @@ public class User {
     public String getLogin() {
         return login;
     }
+
     /**
      * @return the name
      */
     public String getName() {
         return name;
     }
+
     /**
      * @return the password
      */
     public String getPassword() {
         return password;
     }
+
     
 }

@@ -1,6 +1,6 @@
-package com.example.demoLab3.dao;
+package com.rest.demoLab2.dao;
 
-import com.example.demoLab3.model.Product;
+import com.rest.demoLab2.model.Product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

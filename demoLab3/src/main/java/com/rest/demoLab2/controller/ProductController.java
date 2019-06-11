@@ -1,13 +1,13 @@
-package com.example.demoLab3.controller;
+package com.rest.demoLab2.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.websocket.server.PathParam;
 
-import com.example.exception.product.ProductNotFoundException;
-import com.example.demoLab3.model.Product;
-import com.example.demoLab3.service.ProductService;
+import com.exception.product.ProductNotFoundException;
+import com.rest.demoLab2.model.Product;
+import com.rest.demoLab2.service.ProductService;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
