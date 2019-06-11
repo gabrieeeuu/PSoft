@@ -3,6 +3,8 @@ package com.rest.demoLab2.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.websocket.server.PathParam;
+
 import com.exception.product.ProductNotFoundException;
 import com.rest.demoLab2.model.Product;
 import com.rest.demoLab2.service.ProductService;
@@ -17,7 +19,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -86,15 +87,17 @@ public class ProductController {
        }
    }
 
-   @GetMapping(value = "search/{nome}")
+   @GetMapping(value = "search/{name}")
    @ResponseBody
    public ResponseEntity<List<Product>> searchByName(@PathVariable String name){
        List<Product> produtos = productService.findAll();
 
-       for (int i = produtos.size(); i >= 0; i--){
-        if (name != produtos.get(i).getName()){
-            produtos.remove(i);
-        }
+       if(produtos.size() >= 1){
+            for (int i = produtos.size()-1; i >= 0; i--){
+                if (!name.equals(produtos.get(i).getName())){
+                    produtos.remove(i);
+                }
+            }
        }
        
        return new ResponseEntity<List<Product>>(produtos, HttpStatus.OK);

@@ -1,5 +1,5 @@
-/home/gabrielga/PSoft/demoLab2/src/main/java/com/rest/demoLab2/DemoLab2Application.java
 /home/gabrielga/PSoft/demoLab2/src/main/java/com/rest/demoLab2/controller/ProductController.java
+/home/gabrielga/PSoft/demoLab2/src/main/java/com/rest/demoLab2/DemoLab2Application.java
 /home/gabrielga/PSoft/demoLab2/src/main/java/com/exception/product/CustomRestError.java
 /home/gabrielga/PSoft/demoLab2/src/main/java/com/exception/product/RestExceptionHandler.java
 /home/gabrielga/PSoft/demoLab2/src/main/java/com/rest/demoLab2/dao/ProductDAO.java
