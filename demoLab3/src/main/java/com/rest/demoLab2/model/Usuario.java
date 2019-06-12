@@ -1,14 +1,12 @@
-package main.java.com.rest.demoLab2.model;
+package com.rest.demoLab2.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Usuario {
 
-    @ID
+    @Id
     private String login;
     private String password;
     private String name;
