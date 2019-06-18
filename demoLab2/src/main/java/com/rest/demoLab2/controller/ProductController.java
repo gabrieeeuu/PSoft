@@ -1,9 +1,6 @@
 package com.rest.demoLab2.controller;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import javax.websocket.server.PathParam;
 
 import com.exception.product.ProductNotFoundException;
 import com.rest.demoLab2.model.Product;

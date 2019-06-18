@@ -8,6 +8,7 @@ public class Usuario {
 
     @Id
     private String login;
+    
     private String password;
     private String name;
 

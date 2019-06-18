@@ -23,22 +23,8 @@ public class UsuarioService {
        return usuarioDAO.save(usuario);
    }
 
-   public Usuario update(Usuario usuarioToUpdate) throws UsuarioNotFoundException {
-
-
-       Usuario Usuario = usuarioDAO.findByLogin(usuarioToUpdate.getLogin());
-       if (Usuario == null)
-           throw new  UsuarioNotFoundException("Could not update. The Usuario does not exist.");
-
-       return usuarioDAO.save(usuarioToUpdate);
-   }
-
    public Usuario findByLogin(String login) {
        return usuarioDAO.findByLogin(login);
-   }
-
-   public List<Usuario> findAll(){
-       return usuarioDAO.findAll();
    }
 
 }
